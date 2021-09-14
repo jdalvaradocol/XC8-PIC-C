@@ -48,7 +48,8 @@ int main()
     // Configurar PORTA 
     
     TRISA = 0x3F;
-    
+    ADCON1 = 0x07;
+
     // Configurar PORTC y PORTD salida
     
     TRISC = 0;
