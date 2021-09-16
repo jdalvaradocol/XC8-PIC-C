@@ -48,7 +48,8 @@ int main()
     // Configurar PORTA 
     
     TRISA = 0x3F;
-    
+    ADCON1 = 0x07;
+
     // Configurar PORTC y PORTD salida
     
     TRISC = 0;
@@ -105,8 +106,7 @@ void visualizacion(int dato)
     dec = (dato - (um*1000) - (cen*100)) / 10;
     uni = (dato - (um*1000) - (cen*100)) - (dec*10);
     
-    // Relizar el porcedimiento 
-    // anterior con la operacion modulo (%) 
+    // Realizar el procedimiento anterior con la operacion modulo (%) 
     
     for(int i=0;i < 50; i++)
     {
