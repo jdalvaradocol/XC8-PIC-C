@@ -1,7 +1,7 @@
 
 
 #include "adc.h"
-
+#include "configuracion.h"
 
 void adc_Init(char ADFM, char ADCS, char ADNREF, char ADPREF)
 {
@@ -30,7 +30,11 @@ int adc_Leer(char canal)
     // ADRESL                 0011111111
     
     adc = (ADRESH<<8) + ADRESL;
+    
+    ADRESH = 0;
+    ADRESL = 0;
 
     return adc;
 }
+
 
